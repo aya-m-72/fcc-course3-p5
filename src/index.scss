@@ -1,0 +1,122 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: karla, sans-serif;
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  .heading {
+    font-size: 3rem;
+    border-bottom: 2px solid rgb(255, 24, 62);
+  }
+  .length-control {
+    display: flex;
+    // background-color: red;
+    min-width: 40%;
+    gap: 70px;
+    justify-content: space-between;
+
+    .break-length,
+    .session-length {
+      text-align: center;
+      display: grid;
+      grid-template: auto auto / repeat(3, 1fr);
+      row-gap: 20px;
+
+      .span-three {
+        grid-column: span 3;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 2.2rem;
+      }
+      button {
+        background-color: rgb(255, 24, 62);
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        height: 3rem;
+        width: 3rem;
+        cursor: pointer;
+
+        i {
+          font-size: 2rem;
+          color: white;
+        }
+      }
+      button:hover {
+        background-color: rgb(248, 105, 105);
+      }
+      button:active {
+        box-shadow: inset 0 0 10px 2px rgb(13, 13, 13);
+      }
+      .up {
+        justify-self: right;
+      }
+    }
+  }
+  .clock {
+    min-width: 300px;
+    min-height: 300px;
+    border-radius: 50%;
+    border: 6px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+    gap: 1.3rem;
+
+    .time {
+      font-size: 4rem;
+    }
+  }
+  .type {
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 3px solid rgb(255, 24, 62);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  .clock-control {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      background-color: rgb(255, 24, 62);
+      border: none;
+      outline: none;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      cursor: pointer;
+
+      i {
+        color: white;
+        font-size: 2rem;
+      }
+    }
+    button:hover {
+      background-color: rgb(248, 105, 105);
+    }
+    button:active {
+      box-shadow: inset 0 0 10px 2px rgb(13, 13, 13);
+    }
+  }
+}
